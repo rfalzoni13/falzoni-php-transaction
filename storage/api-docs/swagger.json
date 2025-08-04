@@ -1,0 +1,112 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Falzoni Transactions Laravel",
+        "description": "Api de demonstração de transações com PHP e Laravel",
+        "version": "3.0.0"
+    },
+    "paths": {
+        "/api/estatistica": {
+            "get": {
+                "tags": [
+                    "Estatística"
+                ],
+                "summary": "Calcular estatísticas",
+                "description": "Endpoint que retorna as estatísticas das transações nos últimos 60 segundos",
+                "operationId": "92fe356a42e407b1b047a17a52785546",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/api/transacao": {
+            "post": {
+                "tags": [
+                    "Transação"
+                ],
+                "summary": "Registrar transação",
+                "description": "Endpoint que grava uma nova transação",
+                "operationId": "c5171f3aafcf1c0d5a233a8e14cdf911",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "valor": {
+                                        "type": "number",
+                                        "format": "decimal"
+                                    },
+                                    "dataHora": {
+                                        "type": "string",
+                                        "format": "date-time"
+                                    }
+                                },
+                                "type": "object",
+                                "example": {
+                                    "valor": 1000,
+                                    "dataHora": "2023-01-01T00:00:00-03:00"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Transação"
+                ],
+                "summary": "Remover transações",
+                "description": "Endpoint que remove todas as transações registradas",
+                "operationId": "e304be913b9e49f5f2fbe15c6ba4d379",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Result": {
+                "title": "Transaction",
+                "properties": {
+                    "valor": {
+                        "description": "Valor da transação",
+                        "type": "number",
+                        "format": "decimal",
+                        "example": 1000
+                    },
+                    "dataHora": {
+                        "description": "Data e hora da transação",
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2023-01-01T00:00:00-03:00"
+                    }
+                },
+                "type": "object"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Estatística"
+        },
+        {
+            "name": "Transação"
+        }
+    ]
+}
