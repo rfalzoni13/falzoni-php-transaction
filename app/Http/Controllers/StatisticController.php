@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Services\TransactionService;
+use Illuminate\Support\Facades\Log;
 
 /**
  * @OA\Tag(
@@ -30,7 +31,10 @@ class StatisticController extends Controller
      */
     public function getStatistics()
     {
+        Log::info("Iniciando requisição das estatísticas");
         $statistics = $this->service->getStatistics();
+
+        Log::info("Estatísticas calculadas com sucesso!");
         return response()->json($statistics->toArray(), 200);
     }
 }

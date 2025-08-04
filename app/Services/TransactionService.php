@@ -7,6 +7,7 @@ use App\Models\Transaction;
 use DateTime;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
+use SanderMuller\Stopwatch\Stopwatch;
 
 class TransactionService
 {
@@ -36,11 +37,16 @@ class TransactionService
 
     public function clear(): void
     {
+        Log::info("Limpando transações registradas");
         Cache::forget('transactions');
     }
 
     public function getStatistics(): SummaryStatistics
     {
+        Log::info("Calculando estatísticas das transações");
+
+        $stopWatch = StopWatch::start();
+
         $filteredTransactions = array_filter($this->transactions, function (Transaction $transaction) {
             return $transaction->getDataHora() >= now()->addSeconds(-60) &&
                 $transaction->getDataHora() < now();
@@ -59,7 +65,10 @@ class TransactionService
             $min,
             $max,
         );
+        
+        $stopWatch->stop();
 
+        Log::info("Estatísticas calculadas em " . $stopWatch);
         return $statistics;
     }
 }

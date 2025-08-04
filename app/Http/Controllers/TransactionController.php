@@ -82,7 +82,9 @@ class TransactionController extends Controller
      */
     public function delete()
     {
+        Log::info("Iniciando requisição de limpeza de transações");
         $this->service->clear();
+        Log::info("Transações removidas");
         return response()->noContent(200);
     }
 }

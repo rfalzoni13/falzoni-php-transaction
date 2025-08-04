@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d2ae5716458eac80a195e9753b810712",
+    "content-hash": "767852942ddc764a9b812189e4715b48",
     "packages": [
         {
             "name": "brick/math",
@@ -3540,6 +3540,73 @@
                 "source": "https://github.com/ramsey/uuid/tree/4.9.0"
             },
             "time": "2025-06-25T14:20:11+00:00"
+        },
+        {
+            "name": "sandermuller/stopwatch",
+            "version": "v0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SanderMuller/Stopwatch.git",
+                "reference": "d3b2771f86a4c82a7c4e03be09373e3ab05ce7b3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SanderMuller/Stopwatch/zipball/d3b2771f86a4c82a7c4e03be09373e3ab05ce7b3",
+                "reference": "d3b2771f86a4c82a7c4e03be09373e3ab05ce7b3",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/collections": "^11.0|^12.0",
+                "illuminate/support": "^11.0|^12.0",
+                "nesbot/carbon": "^2|^3",
+                "php": "^8.2",
+                "symfony/var-dumper": "^7"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.19",
+                "nunomaduro/collision": "^8.5",
+                "phpstan/extension-installer": "^1.4",
+                "phpstan/phpstan": "^2.1",
+                "phpstan/phpstan-deprecation-rules": "^2.0",
+                "phpstan/phpstan-strict-rules": "^2.0",
+                "rector/rector": "^2.0",
+                "rector/type-perfect": "^2.0",
+                "roave/security-advisories": "dev-latest",
+                "spaze/phpstan-disallowed-calls": "^4.0",
+                "symplify/phpstan-extensions": "^12.0.1",
+                "tomasvotruba/cognitive-complexity": "^1.0",
+                "tomasvotruba/type-coverage": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SanderMuller\\Stopwatch\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sander Muller",
+                    "email": "info@scode.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Stopwatch to measure execution times (profile code) for Laravel and PHP projects",
+            "homepage": "https://github.com/SanderMuller/Stopwatch",
+            "keywords": [
+                "laravel",
+                "php",
+                "profiling",
+                "stopwatch"
+            ],
+            "support": {
+                "issues": "https://github.com/SanderMuller/Stopwatch/issues",
+                "source": "https://github.com/SanderMuller/Stopwatch/tree/v0.2.0"
+            },
+            "time": "2025-02-24T22:02:10+00:00"
         },
         {
             "name": "swagger-api/swagger-ui",
