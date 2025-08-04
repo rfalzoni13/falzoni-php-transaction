@@ -70,7 +70,7 @@ Calcula e retorna estatísticas das transações registradas nos últimos 60 seg
 
 ## Execução via VS Code/Terminal com PHP Artisan
 
-No VS Code, abra um terminal. Na raiz do projeto e digite `composer install`. Após a instação dos pacotes digite `php artisan serve` para executar o projeto.
+No VS Code, abra um terminal. Na raiz do projeto e digite `composer install`. Após a instação, crie um arquivo .env na raiz do projeto, baseado no arquivo .env.example. Após estes passos, digite `php artisan serve` para executar o projeto.
 
 ## Docker
 Para execução via Docker Compose, existem dois arquivos de execução, um arquivo `compose.dev.yml` (Ambiente de desenvolvimento) e outro `compose.prod.yml` (Ambiente de produção). Ambos seguem o padrão da documentação suporte https://docs.docker.com/guides/frameworks/laravel/ do próprio Docker.
