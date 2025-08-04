@@ -7,7 +7,7 @@ Este projeto é baseado no desafio proposto pelo Itaú: https://github.com/rafae
 ## 🚀 Tecnologias Utilizadas
 
 - **PHP 8.4.11**: Linguagem de desenvolvimento base
-- **Spring Boot 3**: Framework principal para desenvolvimento da API
+- **Laravel 11**: Framework principal para desenvolvimento da API
 - **Docker**: Containerização da aplicação
 - **Laravel Tests c\ PHP Unit**: Framework de testes unitários
 - **Swagger**: Documentação interativa da API
