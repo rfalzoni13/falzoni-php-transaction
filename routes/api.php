@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CustomHealthCheckController;
 use App\Http\Controllers\StatisticController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Middleware\ValidateSchema;
@@ -11,3 +12,5 @@ Route::prefix('transacao')->controller(TransactionController::class)->group(func
 });
 
 Route::get('estatistica', [StatisticController::class, 'getStatistics']);
+
+Route::get('health', CustomHealthCheckController::class);

@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Check\HealthCheck;
 use Illuminate\Support\ServiceProvider;
+use Spatie\Health\Facades\Health;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -12,6 +14,9 @@ class AppServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->app->register(\L5Swagger\L5SwaggerServiceProvider::class);
+        Health::checks([
+            HealthCheck::new()
+        ]);
     }
 
     /**
